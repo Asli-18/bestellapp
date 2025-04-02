@@ -79,9 +79,20 @@
     }
 }
 
+@media (max-width: 1000px) {
+    #upBtn {
+        right: 50px;
+    }
+
+}
+
 @media (max-width: 800px) {
     .basketIcon {
         height: 28px;
+    }
+
+    .categorySelection {
+        font-size: 20px;
     }
 
     .categoryName {
@@ -153,6 +164,10 @@
         height: 35px;
     }
 
+    .categorySelection {
+        font-size: 18px;
+    }
+
     .categoryName {
         padding-left: 8px;
     }
@@ -187,6 +202,7 @@
         justify-content: center;
         align-items: center;
     }
+
     .basketIcon {
         height: 24px;
     }

@@ -9,7 +9,6 @@ function render() {
 
     for (let index = 0; index < desserts.length; index++) {
         dessertRef.innerHTML += getCategoryTemplate(index);
-
         for (let j = 0; j < desserts[index].types.length; j++) {
             dessertRef.innerHTML += getDessertCardTemplate(index, j);
         }
@@ -33,7 +32,6 @@ function addToBasket(categoryName, dessertName) {
         basket.push({ ...dessert, quantity: 1 });
     }
     updateBasketDisplay();
-    saveToLocalStorage();
 }
 
 function updateBasketDisplay() {
@@ -45,19 +43,24 @@ function updateBasketDisplay() {
         document.getElementById('sumContent').classList.add('dNone');
         document.getElementById('orderDiv').classList.add('dNone');
     } else {
-        for (let i = 0; i < basket.length; i++) {
-            document.getElementById('sumContent').classList.remove('dNone');
-            document.getElementById('orderDiv').classList.remove('dNone');
-            basketDiv.innerHTML += getBasketTemplate(basket[i], i);
-            calcLine(i);
-            updatePriceDisplay();
-            orderBtn();
-        }
+        allCalc();
     }
     saveToLocalStorage();
 }
 
-function calcLine(i) {
+function allCalc() {
+    let basketDiv = document.getElementById("basket");
+    for (let i = 0; i < basket.length; i++) {
+        document.getElementById('sumContent').classList.remove('dNone');
+        document.getElementById('orderDiv').classList.remove('dNone');
+        basketDiv.innerHTML += getBasketTemplate(basket[i], i);
+        unitPrice(i);
+        updatePriceDisplay();
+        orderBtn();
+    }
+}
+
+function unitPrice(i) {
     let priceRef = document.getElementById(`priceItem${i}`);
     let totalLine = (basket[i].price * basket[i].quantity).toFixed(2).replace('.', ',');
     priceRef.innerText = `${totalLine} €`;
@@ -108,7 +111,6 @@ function sendOrder(i) {
         
         document.getElementById('sumContent').classList.add('dNone');
         document.getElementById('orderBtn').classList.add('dNone');
-        saveToLocalStorage();
     }
     saveToLocalStorage();
 }

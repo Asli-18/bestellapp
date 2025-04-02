@@ -40,5 +40,3 @@ function toggleBasket() {
     basketSection.classList.toggle('dNone');
     basketSection.classList.toggle('open');
 }
-
-document.getElementById('basketToggleBtn')?.addEventListener('click', toggleBasket);

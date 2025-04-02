@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DéliceExpress</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style/standard.css">
+    <link rel="stylesheet" href="./style/basket.css">
+    <link rel="stylesheet" href="./style/mediaQueries.css">
+    <link rel="shortcut icon" href="./assets/icons/pâtisserie-o-bg.png" type="image/x-icon">
+
+    <script src="./script/db.js"></script>
+    <script src="./script/template.js"></script>
+    <script src="./script/assets.js"></script>
+
+</head>
+
+<body onload="init()">
+    <header id="header" class="heFo mobilHeader">
+        <div class="headlingLogo">
+            <img onclick="location.reload()" class="logoBA cursor" src="./assets/icons/pâtisserie-o-bg.png" alt="">
+            <h1 onclick="location.reload()" class="cursor">DéliceExpress</h1>
+        </div>
+        <div>
+            <button class="basketBtn" onclick="toggleBasket()"><img class="basketIcon"
+                    src="./assets/icons/einkaufskorb.png" alt="">
+            </button>
+        </div>
+    </header>
+
+    <main class="content">
+        <section class="mainPage">
+            <img class="coverImg" src="./assets/img/pastries-3418382_1920.jpg" alt="">
+            <img class="logo" src="./assets/img/logo.png" alt="">
+            <div class="nameEvaluationDiv">
+                <h2> Pâtisserie Aslıhan</h2>
+                <span class="evaluation">Bewertung (4,7 von 5 Sternen)</span>
+            </div>
+            <div class="categorySlider">
+                <a href="#Macarons" class="categorySelection">Macarons</a>
+                <a href="#Éclairs" class="categorySelection">Éclairs</a>
+                <a href="#Tartelette" class="categorySelection">Tartelette</a>
+                <a href="#Mille-Feuille" class="categorySelection">Mille-Feuille</a>
+                <a href="#Madeleines" class="categorySelection">Madeleines</a>
+            </div>
+            <div id="contentDesserts"></div>
+        </section>
+
+        <section id="basketSection" class="basketSection">
+            <div id="stickyBasket" class="stickyBasket">
+                <h2 class="basketHeadline">Einkaufskorb</h2>
+                <div class="basketContent">
+                    <div id="basket" class="basket"></div>
+                </div>
+                <div id="sumContent" class="sumContent"></div>
+                <div id="orderDiv" class="orderDiv">
+                </div>
+            </div>
+        </section>
+        <button id="upBtn" title="Go to top">&uarr;</button>
+
+    </main>
+    <div class="iconComesFrom">
+        <span>Der Einkaufskorb Icon stammt von <a
+                href="https://www.flaticon.com/de/kostenlose-icons/handel-und-einkaufen"
+                title="handel und einkaufen Icons">Handel und einkaufen Icons erstellt von Freepik - Flaticon</a></span>
+    </div>
+    <footer class="heFo footy">
+        <p>&copy; 2025 DéliceExpress &hearts; Aslihan Erdogan</p>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>

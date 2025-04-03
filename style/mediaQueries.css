@@ -52,17 +52,17 @@
         cursor: pointer;
         border: 0;
         color: rgb(143, 87, 175);
-        height: 60px;
-        width: 36px;
+        height: 36px;
+        width: 60px;
         font-size: 24px;
         font-weight: bold;
-        display: block;
-        position: sticky;
-        top: 300px;
+        display: flex;
+        /* position: sticky;
+        top: 300px; */
     }
 
     .basketIcon {
-        height: 32px;
+        height: 36px;
         display: block;
         justify-content: center;
     }
@@ -80,16 +80,19 @@
     }
 }
 
-@media (max-width: 1000px) {
-    #upBtn {
-        right: 50px;
-    }
-
-}
-
 @media (max-width: 800px) {
     .basketIcon {
-        height: 28px;
+        height: 32px;
+    }
+    .basketBtn {
+      
+        height: 32px;
+    }
+    #basketCount{
+        font-size: 10px;
+        width: 18px;
+        height: 18px;
+        padding: 2px;
     }
 
     .categorySelection {
@@ -199,14 +202,30 @@
 
 @media (max-width: 500px) {
     .basketBtn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        
+           height: 28px;
     }
 
     .basketIcon {
-        height: 24px;
+        height: 28px;
     }
+
+
+    #basketCount{
+        font-size: 8px;
+        width: 14px;
+        height: 14px;
+        padding: 1px;
+    }
+
+    .logoBA {
+        width: 80px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
 }
 
 @media (max-width: 420px) {
@@ -233,6 +252,15 @@
     .evaluation {
         font-size: 14px;
     }
+   
+        #upBtn {
+            right: 45%;
+        }
+    
+    
+
+
+
 }
 
 @media (max-width: 360px) {

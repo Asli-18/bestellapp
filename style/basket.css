@@ -122,12 +122,15 @@
 }
 
 #basketCount{
-    color: black;
-    font-size: 10px;
-    /* border-radius: 90%;
-    border: 1px solid black; */
-    width: 36px;
-    position: absolute;
+    color: rgb(143, 87, 175);
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid rgb(143, 87, 175);
+    border-radius: 100%;
+    width: 22px;
+    height: 22px;
+    padding: 3px;
+    top: 0;
 }
 
 .dNone {

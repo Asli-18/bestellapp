@@ -77,6 +77,7 @@ function calcSubtotal() {
         totalSum += basket[i].price * basket[i].quantity;
     }
     return totalSum.toFixed(2).replace('.', ',');
+  
 }
 
 function calcTotal() {
@@ -99,16 +100,32 @@ function updatePriceDisplay() {
     saveToLocalStorage();
 }
 
-function basketCount(total) {
+// function basketCount(total) {
+//     let counterRef = document.getElementById('basketCount');
+    
+//     if (basket.length >= 1) {
+//         counterRef.classList.remove('dNone');
+//         counterRef.innerText = `${total} €`;
+//         console.log(total);
+        
+//     } else{
+//         counterRef.classList.add('dNone');
+//         counterRef.innerText = "";
+//     }
+// }
+
+function basketCount() {
     let counterRef = document.getElementById('basketCount');
-    if (basket.length >= 1) {
-        counterRef.classList.remove('dNone');
-        counterRef.innerText = `${total}€`;
-    } else{
-        counterRef.classList.add('dNone');
-        counterRef.innerText = "";
+    counterRef.innerText = "";
+
+    let totalItems = 0;
+    for (let i = 0; i < basket.length; i++) {
+        totalItems += basket[i].quantity;
     }
+    counterRef.innerText = totalItems; 
+    console.log(totalItems);
 }
+
 
 function orderBtn() {
     let orderRef = document.getElementById('orderDiv');

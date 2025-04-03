@@ -49,7 +49,6 @@ let desserts = [
         description: "Schokoladen-Pralinenmousse im Teigmantel.", 
         price: 5.99 
       }
-
     ]
   },
   {
@@ -102,7 +101,6 @@ let desserts = [
         description: "Blätterteig mit Karamell-Kaffeecreme.", 
         price: 5.49 
       }
-
     ]
   },
   {
@@ -129,7 +127,6 @@ let desserts = [
         description: "Mildes Pistazienaroma mit weichem Teig.", 
         price: 2.49 
       }
-
     ]
   }
 ];

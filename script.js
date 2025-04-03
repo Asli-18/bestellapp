@@ -29,7 +29,6 @@ function addToBasket(categoryName, dessertName) {
         basket.push({ ...dessert, quantity: 1 });
     }
     updateBasketDisplay();
-
 }
 
 function updateBasketDisplay() {
@@ -45,7 +44,6 @@ function updateBasketDisplay() {
     } else {
         allCalc();
     }
-    // basketCount(total);
     saveToLocalStorage();
 }
 
@@ -57,8 +55,6 @@ function allCalc() {
         document.getElementById('basketCount').classList.remove('dNone');
         basketDiv.innerHTML += getBasketTemplate(basket[i], i);
         unitPrice(i);
-
-
     }
     updatePriceDisplay();
     orderBtn();
@@ -77,7 +73,6 @@ function calcSubtotal() {
         totalSum += basket[i].price * basket[i].quantity;
     }
     return totalSum.toFixed(2).replace('.', ',');
-  
 }
 
 function calcTotal() {
@@ -100,20 +95,6 @@ function updatePriceDisplay() {
     saveToLocalStorage();
 }
 
-// function basketCount(total) {
-//     let counterRef = document.getElementById('basketCount');
-    
-//     if (basket.length >= 1) {
-//         counterRef.classList.remove('dNone');
-//         counterRef.innerText = `${total} €`;
-//         console.log(total);
-        
-//     } else{
-//         counterRef.classList.add('dNone');
-//         counterRef.innerText = "";
-//     }
-// }
-
 function basketCount() {
     let counterRef = document.getElementById('basketCount');
     counterRef.innerText = "";
@@ -123,7 +104,6 @@ function basketCount() {
         totalItems += basket[i].quantity;
     }
     counterRef.innerText = totalItems; 
-    console.log(totalItems);
 }
 
 
@@ -166,8 +146,6 @@ function deleteItem(i) {
     if (i >= 0 && i < basket.length) {
         basket.splice(i, 1);
         updateBasketDisplay();
-    } else {
-
     }
 }
 

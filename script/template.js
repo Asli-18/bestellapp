@@ -24,7 +24,7 @@ function getBasketTemplate(basket, i) {
                     <p class="priceAndQuantityItem">${basket.quantity}</p>
                     <button onclick="increaseQuantity('${i}', 'priceItem${i}', '${basket.quantity}', '${basket.price}')" class="reduceIncreaseBtn">+</button>
                     <p id="priceItem${i}" class="priceAndQuantityItem"></p>
-                    <button onclick="deleteItem('${i}')" class="trashBtn"><img class="trashImg" src="./assets/icons/trash.svg" alt=""></button>
+                    <button onclick="deleteItem('${i}')" class="trashBtn"><img class="trashImg" src="./assets/icons/trash.svg" alt="icon-papierkorb"></button>
                 </div>
                 <div><p>Einzelpreis: ${basket.price.toFixed(2).replace('.', ',')} €</p>
                 <div id="bigOrder" class="bigOrder"></div>

@@ -57,8 +57,6 @@
         font-size: 24px;
         font-weight: bold;
         display: flex;
-        /* position: sticky;
-        top: 300px; */
     }
 
     .basketIcon {
@@ -84,11 +82,12 @@
     .basketIcon {
         height: 32px;
     }
+
     .basketBtn {
-      
         height: 32px;
     }
-    #basketCount{
+
+    #basketCount {
         font-size: 10px;
         width: 18px;
         height: 18px;
@@ -202,16 +201,14 @@
 
 @media (max-width: 500px) {
     .basketBtn {
-        
-           height: 28px;
+        height: 28px;
     }
 
     .basketIcon {
         height: 28px;
     }
 
-
-    #basketCount{
+    #basketCount {
         font-size: 8px;
         width: 14px;
         height: 14px;
@@ -252,15 +249,10 @@
     .evaluation {
         font-size: 14px;
     }
-   
-        #upBtn {
-            right: 45%;
-        }
-    
-    
 
-
-
+    #upBtn {
+        right: 45%;
+    }
 }
 
 @media (max-width: 360px) {

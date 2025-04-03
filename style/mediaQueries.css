@@ -52,7 +52,8 @@
         cursor: pointer;
         border: 0;
         color: rgb(143, 87, 175);
-        height: 64px;
+        height: 60px;
+        width: 36px;
         font-size: 24px;
         font-weight: bold;
         display: block;

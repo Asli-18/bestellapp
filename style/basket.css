@@ -121,6 +121,15 @@
     display: none;
 }
 
+#basketCount{
+    color: black;
+    font-size: 10px;
+    /* border-radius: 90%;
+    border: 1px solid black; */
+    width: 36px;
+    position: absolute;
+}
+
 .dNone {
     display: none;
 }

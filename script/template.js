@@ -41,10 +41,6 @@ function getTemplateSum(subtotal, deliveryCosts, total) {
             </div>`;
 }
 
-function getBigOrderTemplate() {
-    return `<p>Für größere Bestellungen bitte kontaktiere uns telefonisch!</p>`;
-}
-
 function getOrderBoxMessageTemplate() {
     return `<p class="orderBoxMessage">Füge Köstlichkeiten in dein Einkaufskorb hinzu!</p>`;
 }
